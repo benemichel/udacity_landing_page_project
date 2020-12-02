@@ -1,0 +1,131 @@
+/*
+ *
+ * CSS written based on SMACSS architecture.
+ * To learn more, visit: http://smacss.com/
+ * 
+ * For simplicity, no reset or normalize is added. 
+ * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
+ *
+*/
+
+@import './navbar.css';
+@import './background-circles.css';
+@import './theme.css';
+
+/* ---- Base Rules ---- */
+body {
+    background: rgb(136,203,171);
+    background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    color: #fff;
+}
+
+
+/* Typeography General*/
+h1 {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 3em;
+    margin: 2em 1rem;
+}
+
+@media only screen and (min-width: 35em){
+    h1 {
+        font-size: 7em;
+        margin: 2em 4rem 1em;
+    }
+}
+
+h2 {
+    border-bottom: 1px solid #cc1;
+    font-family: 'Oxygen', Sans-Serif;
+    font-size: 3em;
+    color: #fff;
+}
+
+p {
+    line-height: 1.6em;
+    color: #eee;
+}
+
+/* ---- Layout Rules ---- */
+main {
+    margin: 20vh 1em 10vh;
+}
+
+@media (min-width: 600px) {
+    main {
+        margin: 10vh 1em 10vh;
+    }
+}
+
+.main-hero {
+    min-height: 40vh;
+    padding-top: 3em;
+}
+
+section {
+    position: relative;
+    min-height: 30vh;
+}
+
+
+/* ---- Module Rules ---- */
+/* Header Styles */
+.page__header {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+/* Footer Styles */
+.page__footer {
+    background: #000;
+    padding: 3em;
+    color: #fff;
+}
+
+.page__footer p{
+    color: #fff;
+}
+
+
+/*.your-active-class {*/
+/*    background-color: blue !important;*/
+/*}*/
+
+.scroll-to-top-button {
+    position: fixed;
+    bottom: 3%;
+    right: 5%;
+    background-color: rgba(136,203,171,1);
+    border: none;
+    border-radius: 100%;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 50px;
+    width: 50px;
+    outline: none;
+}
+
+
+.scroll-to-top-button_hidden {
+    display: none;
+}
+
+.section_collapsed .section__content{
+    display: none;
+}
+
+@media (min-width: 600px) {
+    .scroll-to-top-button {
+        bottom: 5%;
+        right: 5%;
+        font-size: 45px;
+        line-height: 100px;
+        width: 100px;
+    }
+}
