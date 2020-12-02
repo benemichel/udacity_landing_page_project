@@ -16,7 +16,7 @@
 
 
 
-##Performance
+## Performance
 
 Script Tag was placed at the bottom of the html file. There are no JS lines of code that have to be run as soon as possible for this page.
 A possible performance gain was not being assessed to be important for this static and not heavily animated page.
